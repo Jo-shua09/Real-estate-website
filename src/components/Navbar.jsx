@@ -39,16 +39,16 @@ const Navbar = () => {
         </div>
 
         <ul className="flex flex-col items-center gap-2">
-          <a href="#header" className="px-4 py-2 rounded-full inline-block md:text-4xl">
+          <a href="#header" className="px-4 py-2 rounded-full inline-block">
             home
           </a>
-          <a href="#about" className="px-4 py-2 rounded-full inline-block md:text-4xl">
+          <a href="#about" className="px-4 py-2 rounded-full inline-block">
             about
           </a>
-          <a href="#project" className="px-4 py-2 rounded-full inline-block md:text-4xl">
+          <a href="#project" className="px-4 py-2 rounded-full inline-block">
             project
           </a>
-          <a href="#testimonials" className="px-4 py-2 rounded-full inline-block md:text-4xl">
+          <a href="#testimonials" className="px-4 py-2 rounded-full inline-block">
             testimonials
           </a>
         </ul>
