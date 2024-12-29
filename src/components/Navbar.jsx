@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { assets } from "../assets/assets";
 
 const Navbar = () => {
@@ -6,6 +6,22 @@ const Navbar = () => {
   function toggleMenu() {
     setIsOpen(!isOpen);
     window.removeEventListener("scroll", toggleMenu);
+  }
+  {
+    /* TO PREVENT THE WEBSITE FROM SCROLLING WHEN YOU SCROLL */
+  }
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+  {
+    /* TO PREVENT THE WEBSITE FROM SCROLLING WHEN YOU SCROLL */
   }
 
   return (
@@ -39,16 +55,16 @@ const Navbar = () => {
         </div>
 
         <ul className="flex flex-col items-center gap-2">
-          <a href="#header" className="px-4 py-2 rounded-full inline-block">
+          <a onClick={toggleMenu} href="#header" className="px-4 py-2 rounded-full inline-block">
             home
           </a>
-          <a href="#about" className="px-4 py-2 rounded-full inline-block">
+          <a onClick={toggleMenu} href="#about" className="px-4 py-2 rounded-full inline-block">
             about
           </a>
-          <a href="#project" className="px-4 py-2 rounded-full inline-block">
+          <a onClick={toggleMenu} href="#project" className="px-4 py-2 rounded-full inline-block">
             project
           </a>
-          <a href="#testimonials" className="px-4 py-2 rounded-full inline-block">
+          <a onClick={toggleMenu} href="#testimonials" className="px-4 py-2 rounded-full inline-block">
             testimonials
           </a>
         </ul>
