@@ -27,7 +27,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="container flex flex-col justify-center mx-auto py-4 pt-20 md:px-20 lg:px-32 w-full overflow-hidden" id="projects">
+    <div className="container flex flex-col justify-center mx-auto py-4 pt-20 md:px-20 lg:px-32 w-full overflow-hidden" id="project">
       <h1 className="text-2xl sm:text-4xl font-bold mb-2 text-center">
         projects <span className="underline underline-offset-4 decoration-1 under font-light"> completed</span>
       </h1>
