@@ -37,7 +37,7 @@ const Contact = () => {
       <p className="text-gray-500 max-w-80 text-center mx-auto mb-8 normal-case">Ready to Make a Move? Let’s Build Your Future Together</p>
 
       <form onSubmit={onSubmit} className="max-w-2xl mx-auto text-gray-600 pt-8">
-        <div className=" flex  flex-wrap">
+        <div className=" flex  flex-wrap justify-between gap-y-6">
           <div className="w-full md:w-1/2 text-left">
             your name
             <input
