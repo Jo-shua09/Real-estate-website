@@ -27,14 +27,14 @@ const Projects = () => {
   };
 
   return (
-    <div className="container flex flex-col justify-center mx-auto py-4 pt-20 md:px-20 lg:px-32 w-full overflow-hidden" id="project">
+    <div className="container flex flex-col justify-center mx-auto py-4 pt-20 md:px-20 lg:px-32 w-full overflow-hidden  " id="project">
       <h1 className="text-2xl sm:text-4xl font-bold mb-2 text-center">
         projects <span className="underline underline-offset-4 decoration-1 under font-light"> completed</span>
       </h1>
       <p className="text-gray-500 max-w-80 text-center mx-auto mb-8 normal-case">Crafting Spaces, Building Legacies—Explore Our Portfolio</p>
 
       {/* Slider buttons */}
-      <div className="flex justify-end items-center mb-8">
+      <div className="flex justify-end items-center mb-8 mr-5">
         <button className="p-3 bg-gray-200 rounded mr-2" onClick={prevProject} aria-label="Previous Project">
           <img src={assets.left_arrow} alt="Previous" />
         </button>
@@ -45,7 +45,7 @@ const Projects = () => {
       {/* Slider buttons */}
 
       {/* Project slider container */}
-      <div className="overflow-hidden">
+      <div className="overflow-hidden mx-6">
         <div
           className=" flex gap-8 transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${(currentIndex * 100) / cardToShow}%)` }}
