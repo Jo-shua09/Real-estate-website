@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { assets, projectsData } from "../assets/assets";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,7 +28,14 @@ const Projects = () => {
   };
 
   return (
-    <div className="container flex flex-col justify-center mx-auto py-4 pt-20 md:px-20 lg:px-32 w-full overflow-hidden  " id="project">
+    <motion.div
+      initial={{ opacity: 0, x: -200 }}
+      transition={{ ease: "easeOut", duration: 1 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      className="container flex flex-col justify-center mx-auto py-4 pt-20 md:px-20 lg:px-32 w-full overflow-hidden  "
+      id="project"
+    >
       <h1 className="text-2xl sm:text-4xl font-bold mb-2 text-center">
         projects <span className="underline underline-offset-4 decoration-1 under font-light"> completed</span>
       </h1>
@@ -67,7 +75,7 @@ const Projects = () => {
         </div>
       </div>
       {/* Project slider container */}
-    </div>
+    </motion.div>
   );
 };
 
